@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hiT-3v-vm9">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="163" id="NaC-PU-C5N" customClass="UserTableViewCell" customModule="secondWeek_SeSAC" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="163" id="NaC-PU-C5N" customClass="UserTableViewCell" customModule="secondWeek_SeSAC" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="163"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NaC-PU-C5N" id="V4k-Nj-iLI">
@@ -46,17 +46,29 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHm-FA-rxv">
+                                            <rect key="frame" x="16.000000000000004" y="8" width="47.333333333333343" height="47.333333333333336"/>
+                                            <color key="backgroundColor" red="0.83921568629999999" green="0.79215686269999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="oHm-FA-rxv" secondAttribute="height" multiplier="1:1" id="3K6-Iq-Top"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="richtext.page.fill.th" catalog="system"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Juo-g6-bWz" firstAttribute="leading" secondItem="uM5-by-mFG" secondAttribute="trailing" constant="16" id="3rr-8W-SQA"/>
                                         <constraint firstAttribute="trailing" secondItem="Juo-g6-bWz" secondAttribute="trailing" constant="16" id="MQZ-p3-6Zt"/>
                                         <constraint firstItem="uM5-by-mFG" firstAttribute="top" secondItem="V4k-Nj-iLI" secondAttribute="top" constant="8" id="RHX-Na-4e5"/>
+                                        <constraint firstItem="oHm-FA-rxv" firstAttribute="top" secondItem="uM5-by-mFG" secondAttribute="top" id="Svf-Ww-AlS"/>
                                         <constraint firstItem="Juo-g6-bWz" firstAttribute="centerY" secondItem="V4k-Nj-iLI" secondAttribute="centerY" id="c3s-tv-Wkd"/>
+                                        <constraint firstItem="oHm-FA-rxv" firstAttribute="leading" secondItem="uM5-by-mFG" secondAttribute="leading" id="nRc-ik-GoW"/>
                                         <constraint firstItem="uM5-by-mFG" firstAttribute="leading" secondItem="V4k-Nj-iLI" secondAttribute="leading" constant="16" id="pP8-R7-Iiu"/>
                                         <constraint firstAttribute="bottom" secondItem="uM5-by-mFG" secondAttribute="bottom" constant="8" id="zw3-CR-JCX"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="likeButton" destination="oHm-FA-rxv" id="pct-sV-JMf"/>
                                     <outlet property="messageLabel" destination="hwG-UJ-YMj" id="HIm-yU-nhh"/>
                                     <outlet property="nameLabel" destination="0xE-0K-gOz" id="hgD-Gh-owK"/>
                                     <outlet property="profileImageView" destination="uM5-by-mFG" id="GNs-fy-gGw"/>
@@ -75,6 +87,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="richtext.page.fill.th" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
