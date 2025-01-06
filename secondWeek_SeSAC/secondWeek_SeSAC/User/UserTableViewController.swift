@@ -36,6 +36,10 @@ class UserTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Xib cell 추가할 경우 사용해야하는 코드
+//        let nib = UINib(nibName: "NoProfileTableViewCell", bundle: nil)
+//        tableView.register(nib, forCellReuseIdentifier: "NoProfileTableViewCell")
     }
     
     @objc
@@ -45,6 +49,8 @@ class UserTableViewController: UITableViewController {
         print(friends[sender.tag])
         
         friends[sender.tag].like.toggle()
+        
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
         
         print(friends[sender.tag])
     }
@@ -58,19 +64,13 @@ class UserTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! UserTableViewCell
-        cell.profileImageView.backgroundColor = .lightGray
+        //UserTableViewCell 인스턴스
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as! UserTableViewCell
         
         let row = friends[indexPath.row]
         
-        let image1 = row.profile_image
+        cell.configureData(row: row)
         
-        if let image1 {
-            let url = URL(string: image1)
-            cell.profileImageView.kf.setImage(with: url)
-        } else {
-            cell.profileImageView.image = UIImage(systemName: "person")
-        }
         
         //kf 활용: 더미로 받은 profile image 주소가 유효했다면 아래와 같이 구상 가능
 //        let imageURL = URL(string: friends[indexPath.row].profile_image ?? "")
@@ -79,19 +79,9 @@ class UserTableViewController: UITableViewController {
 //        let image = friends[indexPath.row].profile_image ?? "person.fill"
 //        cell.profileImageView.image = UIImage(systemName: image)
         
-        cell.nameLabel.text = row.name
-        cell.nameLabel.font = .boldSystemFont(ofSize: 15)
-        
-        cell.messageLabel.text = row.message
-        cell.messageLabel.font = .systemFont(ofSize: 12)
-        
-        // like == true -> heart.fill
-        // like == false -> heart
-        let name = row.like ? "heart.fill" : "heart"
-        cell.likeButton.setImage(UIImage(systemName: name), for: .normal)
         //각 셀별 버튼을 구분하기 위해서 tag를 분류
-        
         cell.likeButton.tag = indexPath.row
+        
         //IBAction 대신 코드로 연결
         //self: 각 셀별 버튼 자체를 사용하기에 self를 사용
         //Function Types
@@ -105,7 +95,7 @@ class UserTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
     
 }

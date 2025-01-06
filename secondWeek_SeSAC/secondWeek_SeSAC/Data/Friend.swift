@@ -13,13 +13,19 @@ struct Friends {
     let profile_image: String?
     let phone: Int?
     var like: Bool
+    
+    var nameDescription: String {
+        get {
+            return "이름 : \(name), \(message?.count ?? 0)글자 작성"
+        }
+    }
 }
 
 struct FriendsInfo {
     let list: [Friends] = [
         Friends(
             name: "김민준",
-            message: "오늘도 행복하세요 ☺️",
+            message: "오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️ 오늘도 행복하세요 ☺️",
             profile_image: "https://picsum.photos/id/1/200/200",
             phone: 12345678,
             like: true
@@ -40,7 +46,7 @@ struct FriendsInfo {
         ),
         Friends(
             name: "최예린",
-            message: "인생은 단 한 번뿐이니까",
+            message: "인생은 단 한 번뿐이니까 인생은 단 한 번뿐이니까 인생은 단 한 번뿐이니까 인생은 단 한 번뿐이니까",
             profile_image: nil,
             phone: 45678901,
             like: true

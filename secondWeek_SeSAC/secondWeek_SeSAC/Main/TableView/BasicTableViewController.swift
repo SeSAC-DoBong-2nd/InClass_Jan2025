@@ -9,7 +9,7 @@ import UIKit
 
 class BasicTableViewController: UITableViewController {
     
-    var list = ["프로젝트", "메인 업무", "새싹 과제"] {
+    var list = ["프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트프로젝트", "메인업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무메인 업무", "새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제새싹과제"] {
         didSet {
             tableView.reloadData()
         }
@@ -21,7 +21,7 @@ class BasicTableViewController: UITableViewController {
         //tableView.allowsSelection: 테이블 뷰에 관한 isUserInteraction 느낌의 값
         
         //모든 cell의 크기가 동일하다면 아래 코드 처럼 한번에 cell의 높이를 정의하 수월함
-        tableView.rowHeight = 80
+        tableView.rowHeight = UITableView.automaticDimension
         
 //        var moster = Monster() //초기화를 하여 인스턴스를 만들었다 라고 함.
     }
@@ -59,6 +59,7 @@ class BasicTableViewController: UITableViewController {
 //            cell.textLabel?.text = "Error"
 //        }
         cell.textLabel?.text = list[indexPath.row]
+        cell.textLabel?.numberOfLines = 0
         //위 주석처리 된 조건문의 번거로움을 바로 해결하고자 해당 코드가 등장
         //이는 indexPath.row가 각 cell의 index 값을 나타내는 것을 활용한 것
         
