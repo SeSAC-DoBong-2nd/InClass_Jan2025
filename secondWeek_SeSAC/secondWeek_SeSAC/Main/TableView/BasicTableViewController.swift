@@ -30,7 +30,7 @@ class BasicTableViewController: UITableViewController {
     
     //섹션을 여러개 쓰지 않는 이상 해당 메서드는 잘 안 씀
 //    override func numberOfSections(in tableView: UITableView) -> Int {
-//        <#code#>
+//
 //    }
     
     //1. 셀의 개수: numberOfRowsInSection

@@ -23,6 +23,9 @@ class UserTableViewController: UITableViewController {
         }
     }
     
+    override func loadView() {
+    }
+    
 //    let friends = [
 //        Friend(name: "고래밥", message: "배고파", profile_image: "star.circle.fill"),
 //        Friend(name: "고래밥 냠냠", message: "행복한 하루", profile_image: "pencil"),
