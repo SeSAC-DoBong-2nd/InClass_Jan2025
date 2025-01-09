@@ -9,6 +9,12 @@ import UIKit
 
 import MapKit
 
+struct User {
+    
+    let name: String
+    
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
@@ -16,6 +22,18 @@ class ViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     
     let pickerView = UIPickerView()
+    let color: [UIColor] = [.blue]
+    
+    let user: [User] = [
+        User(name: "a"),
+        User(name: "b")
+    ]
+    
+    let user2: [User] = [
+        .init(name: "a"),
+        .init(name: "b")
+    ]
+    
     
     let list = ["가", "나", "다"]
     let array = ["1", "2", "3", "4"]
@@ -38,6 +56,23 @@ class ViewController: UIViewController {
 
 }
 
+//MARK: - Private Extension
+private extension ViewController {
+    
+    func configureMapView() {
+        let center = CLLocationCoordinate2D(latitude: 37.65370, longitude: 127.04740)
+        
+        mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = center
+        annotation.title = "훈하하"
+        mapView.addAnnotation(annotation)
+    }
+    
+}
+
+//MARK: - UITextFieldDelegate
 extension ViewController: UITextFieldDelegate {
     
     //키보드에서 return 키 눌렀을 때
@@ -63,6 +98,7 @@ extension ViewController: UITextFieldDelegate {
     
 }
 
+//MARK: - UIPickerViewDelegate
 extension ViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -71,6 +107,7 @@ extension ViewController: UIPickerViewDelegate {
     
 }
 
+//MARK: - UIPickerViewDataSource
 extension ViewController: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -87,19 +124,6 @@ extension ViewController: UIPickerViewDataSource {
     
 }
 
-extension ViewController: MKMapViewDelegate {
-    
-    func configureMapView() {
-        
-        let center = CLLocationCoordinate2D(latitude: 37.65370, longitude: 127.04740)
-        
-        mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = center
-        annotation.title = "훈하하"
-        mapView.addAnnotation(annotation)
-    }
-    
-}
+//MARK: - MKMapViewDelegate
+extension ViewController: MKMapViewDelegate { }
 
