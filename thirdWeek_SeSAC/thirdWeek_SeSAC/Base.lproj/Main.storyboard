@@ -148,6 +148,68 @@
             </objects>
             <point key="canvasLocation" x="1073" y="-27"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rtL-Kf-fBf">
+            <objects>
+                <viewController id="hpm-FV-gvc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mgl-u1-Wo1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="오잉크" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFy-GP-QNF">
+                                <rect key="frame" x="20" y="79" width="289" height="40"/>
+                                <color key="backgroundColor" red="0.18920732539999999" green="0.66965976670000005" blue="0.89036040549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jLV-cW-RIS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="^^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsl-bC-1et">
+                                <rect key="frame" x="329" y="79" width="44" height="40"/>
+                                <color key="backgroundColor" red="0.84752282970000004" green="0.89000000000000001" blue="0.51463818289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Fjl-5M-qxw"/>
+                                    <constraint firstAttribute="height" constant="40" id="aQp-PK-ieb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MC-Bh-CaI">
+                                <rect key="frame" x="159" y="188" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="J8E-jH-r8c" kind="presentation" id="ZVZ-rg-C2D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ldH-Ca-0Qh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lsl-bC-1et" firstAttribute="leading" secondItem="ZFy-GP-QNF" secondAttribute="trailing" constant="20" id="aMc-cF-58C"/>
+                            <constraint firstItem="ldH-Ca-0Qh" firstAttribute="trailing" secondItem="Lsl-bC-1et" secondAttribute="trailing" constant="20" id="alQ-gM-wRX"/>
+                            <constraint firstItem="ZFy-GP-QNF" firstAttribute="leading" secondItem="ldH-Ca-0Qh" secondAttribute="leading" constant="20" id="e7V-3g-qsU"/>
+                            <constraint firstItem="ZFy-GP-QNF" firstAttribute="top" secondItem="ldH-Ca-0Qh" secondAttribute="top" constant="20" id="pnm-pd-Bdw"/>
+                            <constraint firstItem="Lsl-bC-1et" firstAttribute="top" secondItem="ldH-Ca-0Qh" secondAttribute="top" constant="20" id="wzU-oz-NUc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTw-04-F5M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="-12"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="ae4-oP-6mL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="J8E-jH-r8c" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8V-Q4-fiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2543" y="-192"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
