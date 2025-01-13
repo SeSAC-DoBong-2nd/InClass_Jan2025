@@ -30,16 +30,40 @@ class ViewController: UIViewController {
     let redView = UIView()
     let greenView = UIView()
     let grayView = UIView()
+    
+    lazy var button: UIButton = {
+        let btn = UIButton()
+        print("button")
+        btn.setTitle("다음", for: .normal)
+        btn.backgroundColor = .brown
+        btn.addTarget(self, action: #selector(nextButtonTapeed), for: .touchUpInside)
+        
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("viewDidLoad")
         freameBasedLayout()
         autoLayoutConstraints()
         autoLayoutAnchor()
 //        autoLayoutSnapKit()
         autoLayoutSnapKit2()
+        configureButton()
     }
+    
+    func configureButton() {
+        view.addSubview(button)
+        
+        
+        button.snp.makeConstraints {
+            $0.height.equalTo(50)
+            $0.width.equalTo(300)
+            $0.top.equalToSuperview().offset(200)
+            $0.centerX.equalToSuperview()
+        }
+    }
+    
 
     func freameBasedLayout() {
         //2. addSubview로 뷰 추가
@@ -168,6 +192,13 @@ class ViewController: UIViewController {
             //redView에 addSubview 되었기 때문.
             $0.edges.equalToSuperview()
         }
+    }
+    
+    @objc
+    func nextButtonTapeed() {
+        print(#function)
+        let vc = BookViewController()
+        present(vc, animated: true)
     }
 
 }
