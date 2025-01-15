@@ -10,6 +10,15 @@
 		9E7882F02D35E59200A3697D /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7882EF2D35E59200A3697D /* RandomViewController.swift */; };
 		9E7882F32D35E5D100A3697D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7882F22D35E5D100A3697D /* Kingfisher */; };
 		9E7882F62D35FB7F00A3697D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7882F52D35FB7F00A3697D /* Alamofire */; };
+		9E7883142D3738DF00A3697D /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883112D3738DF00A3697D /* MarketTableViewCell.swift */; };
+		9E7883152D3738DF00A3697D /* KakaoBookSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78830E2D3738DF00A3697D /* KakaoBookSearchTableViewCell.swift */; };
+		9E7883162D3738DF00A3697D /* KakaoBookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78830F2D3738DF00A3697D /* KakaoBookSearchViewController.swift */; };
+		9E7883172D3738DF00A3697D /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883122D3738DF00A3697D /* MarketViewController.swift */; };
+		9E78831A2D375CFE00A3697D /* KakaoAPIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883192D375CFE00A3697D /* KakaoAPIResponseModel.swift */; };
+		9E78831C2D375DD400A3697D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9E78831B2D375DD400A3697D /* .gitignore */; };
+		9E78831E2D375E7E00A3697D /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78831D2D375E7E00A3697D /* APIKey.swift */; };
+		9E7883202D377C4A00A3697D /* MarketAPIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78831F2D377C3F00A3697D /* MarketAPIResponseModel.swift */; };
+		9E7883282D3785CC00A3697D /* BlackRadiusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883272D3785CC00A3697D /* BlackRadiusLabel.swift */; };
 		9EBB06E32D3498CC002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB06D92D3498CC002C52D6 /* AppDelegate.swift */; };
 		9EBB06E42D3498CC002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB06E02D3498CC002C52D6 /* SceneDelegate.swift */; };
 		9EBB06E52D3498CC002C52D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB06E12D3498CC002C52D6 /* ViewController.swift */; };
@@ -23,6 +32,15 @@
 
 /* Begin PBXFileReference section */
 		9E7882EF2D35E59200A3697D /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		9E78830E2D3738DF00A3697D /* KakaoBookSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBookSearchTableViewCell.swift; sourceTree = "<group>"; };
+		9E78830F2D3738DF00A3697D /* KakaoBookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBookSearchViewController.swift; sourceTree = "<group>"; };
+		9E7883112D3738DF00A3697D /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
+		9E7883122D3738DF00A3697D /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		9E7883192D375CFE00A3697D /* KakaoAPIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIResponseModel.swift; sourceTree = "<group>"; };
+		9E78831B2D375DD400A3697D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9E78831D2D375E7E00A3697D /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		9E78831F2D377C3F00A3697D /* MarketAPIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAPIResponseModel.swift; sourceTree = "<group>"; };
+		9E7883272D3785CC00A3697D /* BlackRadiusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusLabel.swift; sourceTree = "<group>"; };
 		9EBB06C12D3497D5002C52D6 /* fourthWeek_SeSAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fourthWeek_SeSAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB06D92D3498CC002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB06DA2D3498CC002C52D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,9 +67,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E7883102D3738DF00A3697D /* Kakao */ = {
+			isa = PBXGroup;
+			children = (
+				9E78830E2D3738DF00A3697D /* KakaoBookSearchTableViewCell.swift */,
+				9E78830F2D3738DF00A3697D /* KakaoBookSearchViewController.swift */,
+				9E7883192D375CFE00A3697D /* KakaoAPIResponseModel.swift */,
+			);
+			path = Kakao;
+			sourceTree = "<group>";
+		};
+		9E7883132D3738DF00A3697D /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				9E78831F2D377C3F00A3697D /* MarketAPIResponseModel.swift */,
+				9E7883112D3738DF00A3697D /* MarketTableViewCell.swift */,
+				9E7883122D3738DF00A3697D /* MarketViewController.swift */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		9E7883262D3785B400A3697D /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883272D3785CC00A3697D /* BlackRadiusLabel.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		9EBB06B82D3497D5002C52D6 = {
 			isa = PBXGroup;
 			children = (
+				9E78831B2D375DD400A3697D /* .gitignore */,
 				9EBB06E22D3498CC002C52D6 /* fourthWeek_SeSAC */,
 				9EBB06C22D3497D5002C52D6 /* Products */,
 			);
@@ -68,6 +115,7 @@
 		9EBB06E22D3498CC002C52D6 /* fourthWeek_SeSAC */ = {
 			isa = PBXGroup;
 			children = (
+				9E7883262D3785B400A3697D /* CustomView */,
 				9EBB06EA2D3498CE002C52D6 /* Application */,
 				9EBB06DA2D3498CC002C52D6 /* Assets.xcassets */,
 				9EBB06DF2D3498CC002C52D6 /* Main.storyboard */,
@@ -75,6 +123,8 @@
 				9EBB06EE2D34D9F4002C52D6 /* BookViewController.swift */,
 				9EBB06F02D34E6EC002C52D6 /* BookCollectionViewCell.swift */,
 				9E7882EF2D35E59200A3697D /* RandomViewController.swift */,
+				9E7883102D3738DF00A3697D /* Kakao */,
+				9E7883132D3738DF00A3697D /* Market */,
 			);
 			path = fourthWeek_SeSAC;
 			sourceTree = "<group>";
@@ -86,6 +136,7 @@
 				9EBB06E02D3498CC002C52D6 /* SceneDelegate.swift */,
 				9EBB06DD2D3498CC002C52D6 /* LaunchScreen.storyboard */,
 				9EBB06DB2D3498CC002C52D6 /* Info.plist */,
+				9E78831D2D375E7E00A3697D /* APIKey.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -159,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E78831C2D375DD400A3697D /* .gitignore in Resources */,
 				9EBB06E62D3498CC002C52D6 /* Assets.xcassets in Resources */,
 				9EBB06E82D3498CC002C52D6 /* LaunchScreen.storyboard in Resources */,
 				9EBB06E92D3498CC002C52D6 /* Main.storyboard in Resources */,
@@ -172,11 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7883142D3738DF00A3697D /* MarketTableViewCell.swift in Sources */,
+				9E7883152D3738DF00A3697D /* KakaoBookSearchTableViewCell.swift in Sources */,
+				9E7883282D3785CC00A3697D /* BlackRadiusLabel.swift in Sources */,
+				9E7883162D3738DF00A3697D /* KakaoBookSearchViewController.swift in Sources */,
+				9E7883172D3738DF00A3697D /* MarketViewController.swift in Sources */,
 				9EBB06E32D3498CC002C52D6 /* AppDelegate.swift in Sources */,
 				9EBB06EF2D34D9F4002C52D6 /* BookViewController.swift in Sources */,
 				9EBB06E42D3498CC002C52D6 /* SceneDelegate.swift in Sources */,
 				9E7882F02D35E59200A3697D /* RandomViewController.swift in Sources */,
+				9E7883202D377C4A00A3697D /* MarketAPIResponseModel.swift in Sources */,
+				9E78831A2D375CFE00A3697D /* KakaoAPIResponseModel.swift in Sources */,
 				9EBB06F12D34E6EC002C52D6 /* BookCollectionViewCell.swift in Sources */,
+				9E78831E2D375E7E00A3697D /* APIKey.swift in Sources */,
 				9EBB06E52D3498CC002C52D6 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow.init(windowScene: scene)
         
-        let nav = UINavigationController(rootViewController: RandomViewController())
+        let nav = UINavigationController(rootViewController: MarketViewController())
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }

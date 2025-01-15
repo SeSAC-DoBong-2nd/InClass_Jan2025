@@ -7,9 +7,9 @@
 
 import UIKit
 
-import SnapKit
 import Alamofire
 import Kingfisher
+import SnapKit
 
 struct UserAPIResponse: Decodable {
     let results: [UserDatail]
