@@ -85,7 +85,6 @@ class RandomViewController: UIViewController, ViewConfiguration {
             $0.top.equalTo(nameLabel.snp.bottom).offset(20)
         }
         
-        randomButton.snp_height
     }
     
     func setStyle() {
@@ -138,7 +137,6 @@ class RandomViewController: UIViewController, ViewConfiguration {
         print("======44444======")
     }
     
-    
     @objc
     func lottoButtonTapped() {
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(Int.random(in: (1000...1154)))"
@@ -163,26 +161,7 @@ class RandomViewController: UIViewController, ViewConfiguration {
     
     @objc
     func userButtonTapped() {
-        let url = "https://randomuser.me/api/?results=10"
-        
-        AF.request(url, method: .get).responseDecodable(of: UserAPIResponse.self) { response in
-            switch response.result {
-                
-                //응답, 식판 둘 다 문제 없다. => 구조체를 활용할 수 있다.
-            case .success(let value):
-                print("success")
-                let gender = value.results[0].gender
-                let name = value.results[0].name.last + " " + value.results[0].name.first
-                self.nameLabel.text = "나는 \(gender)이고, 이름은 \(name)이야!"
-                
-                //응답은 잘 왔으나, decodable한 내용을 담는 Response Struct가 이상한 경우에도 error가 발생
-            case .failure(let error):
-                print("error")
-                print(error)
-                
-            }
-            
-        }
+//        NetworkManager.shared.randomUser()
     }
     
 }

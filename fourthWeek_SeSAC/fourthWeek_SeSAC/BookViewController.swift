@@ -11,55 +11,27 @@ import SnapKit
 
 class BookViewController: UIViewController {
     
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCollectionViewLayout())
-
-    //tableView 코드는 'programmingly' 키워드로 검색하여 알아보자
+    let mainView = BookView()
+    //VCLifeCycle 중 가장 먼저 실행.
+    //VC의 view를 다른 view와 갈아끼울 수 있음
+    //절대 super 메서드 호출하면 안됨
+      //왜냐하면 apple의 uiview를 다시금 정의하는 거니까 내가 원하는 뷰로 안 바뀔 수 있음
+    override func loadView() {
+        self.view = mainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        
-        view.addSubview(collectionView)
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
-        
-        
-        
-        
-        collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+
+        //아래 코드 풀이
+        //name이라는 매개변수를 갖는 함수를 넣어 주는데, 나는 name 이라는 매개변수를 네비게이션 title에 쓰고 싶어
+        NetworkManager.shared.randomUser { name in
+            print("escaping NetworkManager.shared.randomUser 1")
+            self.navigationItem.title = name
+            print("escaping NetworkManager.shared.randomUser 2")
         }
-    }
-    
-    func createCollectionViewLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 50, height: 50)
-        layout.scrollDirection = .vertical
-        
-        return layout
+        print("escaping NetworkManager.shared.randomUser 3")
     }
     
 }
 
-extension BookViewController: UICollectionViewDelegate {
-    
-}
-
-extension BookViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as! BookCollectionViewCell
-        
-//        cell.bookCoverImageView.image = UIImage(systemName: "star")
-        
-        return cell
-    }
-    
-}
