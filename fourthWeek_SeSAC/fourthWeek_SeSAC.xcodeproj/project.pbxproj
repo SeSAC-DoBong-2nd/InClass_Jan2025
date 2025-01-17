@@ -24,6 +24,9 @@
 		9E7883362D38B33800A3697D /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883352D38B33800A3697D /* BookView.swift */; };
 		9E7883382D38CF9900A3697D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883372D38CF9900A3697D /* UserDefaultsManager.swift */; };
 		9E78833A2D38D36000A3697D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883392D38D36000A3697D /* NetworkManager.swift */; };
+		9E78835A2D39D9D100A3697D /* ImageZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7883592D39D9D100A3697D /* ImageZoomViewController.swift */; };
+		9E78835E2D39E02100A3697D /* VerticalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78835D2D39E02100A3697D /* VerticalScrollViewController.swift */; };
+		9E7883602D39E6CB00A3697D /* HorizontalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78835F2D39E6CB00A3697D /* HorizontalScrollViewController.swift */; };
 		9EBB06E32D3498CC002C52D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB06D92D3498CC002C52D6 /* AppDelegate.swift */; };
 		9EBB06E42D3498CC002C52D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB06E02D3498CC002C52D6 /* SceneDelegate.swift */; };
 		9EBB06E52D3498CC002C52D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB06E12D3498CC002C52D6 /* ViewController.swift */; };
@@ -51,6 +54,9 @@
 		9E7883352D38B33800A3697D /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		9E7883372D38CF9900A3697D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		9E7883392D38D36000A3697D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9E7883592D39D9D100A3697D /* ImageZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomViewController.swift; sourceTree = "<group>"; };
+		9E78835D2D39E02100A3697D /* VerticalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollViewController.swift; sourceTree = "<group>"; };
+		9E78835F2D39E6CB00A3697D /* HorizontalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollViewController.swift; sourceTree = "<group>"; };
 		9EBB06C12D3497D5002C52D6 /* fourthWeek_SeSAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fourthWeek_SeSAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBB06D92D3498CC002C52D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EBB06DA2D3498CC002C52D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,11 +120,42 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		9E7883582D39D9A600A3697D /* ScrollViewUI */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883592D39D9D100A3697D /* ImageZoomViewController.swift */,
+				9E78835D2D39E02100A3697D /* VerticalScrollViewController.swift */,
+				9E78835F2D39E6CB00A3697D /* HorizontalScrollViewController.swift */,
+			);
+			path = ScrollViewUI;
+			sourceTree = "<group>";
+		};
+		9E78835B2D39D9D600A3697D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883392D38D36000A3697D /* NetworkManager.swift */,
+				9E7883372D38CF9900A3697D /* UserDefaultsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9E78835C2D39D9EB00A3697D /* Book, Random */ = {
+			isa = PBXGroup;
+			children = (
+				9E7883352D38B33800A3697D /* BookView.swift */,
+				9EBB06EE2D34D9F4002C52D6 /* BookViewController.swift */,
+				9EBB06F02D34E6EC002C52D6 /* BookCollectionViewCell.swift */,
+				9E7882EF2D35E59200A3697D /* RandomViewController.swift */,
+			);
+			path = "Book, Random";
+			sourceTree = "<group>";
+		};
 		9EBB06B82D3497D5002C52D6 = {
 			isa = PBXGroup;
 			children = (
 				9E78831B2D375DD400A3697D /* .gitignore */,
 				9EBB06E22D3498CC002C52D6 /* fourthWeek_SeSAC */,
+				9E78835C2D39D9EB00A3697D /* Book, Random */,
 				9EBB06C22D3497D5002C52D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,20 +171,16 @@
 		9EBB06E22D3498CC002C52D6 /* fourthWeek_SeSAC */ = {
 			isa = PBXGroup;
 			children = (
+				9EBB06EA2D3498CE002C52D6 /* Application */,
+				9E78835B2D39D9D600A3697D /* Manager */,
+				9E7883582D39D9A600A3697D /* ScrollViewUI */,
 				9E7883302D38AFB000A3697D /* Base */,
 				9E7883262D3785B400A3697D /* CustomView */,
-				9EBB06EA2D3498CE002C52D6 /* Application */,
 				9EBB06DA2D3498CC002C52D6 /* Assets.xcassets */,
 				9EBB06DF2D3498CC002C52D6 /* Main.storyboard */,
 				9EBB06E12D3498CC002C52D6 /* ViewController.swift */,
-				9E7883352D38B33800A3697D /* BookView.swift */,
-				9EBB06EE2D34D9F4002C52D6 /* BookViewController.swift */,
-				9EBB06F02D34E6EC002C52D6 /* BookCollectionViewCell.swift */,
-				9E7882EF2D35E59200A3697D /* RandomViewController.swift */,
 				9E7883102D3738DF00A3697D /* Kakao */,
 				9E7883132D3738DF00A3697D /* Market */,
-				9E7883392D38D36000A3697D /* NetworkManager.swift */,
-				9E7883372D38CF9900A3697D /* UserDefaultsManager.swift */,
 			);
 			path = fourthWeek_SeSAC;
 			sourceTree = "<group>";
@@ -254,11 +287,13 @@
 				9E7883282D3785CC00A3697D /* BlackRadiusLabel.swift in Sources */,
 				9E7883162D3738DF00A3697D /* KakaoBookSearchViewController.swift in Sources */,
 				9E7883172D3738DF00A3697D /* MarketViewController.swift in Sources */,
+				9E78835A2D39D9D100A3697D /* ImageZoomViewController.swift in Sources */,
 				9EBB06E32D3498CC002C52D6 /* AppDelegate.swift in Sources */,
 				9EBB06EF2D34D9F4002C52D6 /* BookViewController.swift in Sources */,
 				9EBB06E42D3498CC002C52D6 /* SceneDelegate.swift in Sources */,
 				9E7882F02D35E59200A3697D /* RandomViewController.swift in Sources */,
 				9E7883202D377C4A00A3697D /* MarketAPIResponseModel.swift in Sources */,
+				9E78835E2D39E02100A3697D /* VerticalScrollViewController.swift in Sources */,
 				9E78831A2D375CFE00A3697D /* KakaoAPIResponseModel.swift in Sources */,
 				9EBB06F12D34E6EC002C52D6 /* BookCollectionViewCell.swift in Sources */,
 				9E78831E2D375E7E00A3697D /* APIKey.swift in Sources */,
@@ -266,6 +301,7 @@
 				9E7883322D38AFD900A3697D /* BaseTableViewCell.swift in Sources */,
 				9EBB06E52D3498CC002C52D6 /* ViewController.swift in Sources */,
 				9E7883342D38B25A00A3697D /* BaseView.swift in Sources */,
+				9E7883602D39E6CB00A3697D /* HorizontalScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

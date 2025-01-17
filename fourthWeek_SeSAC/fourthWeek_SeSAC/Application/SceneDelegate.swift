@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow.init(windowScene: scene)
         
-        let nav = UINavigationController(rootViewController: BookViewController())
+        let nav = UINavigationController(rootViewController: KakaoBookSearchViewController())
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }

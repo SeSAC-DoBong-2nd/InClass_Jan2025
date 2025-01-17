@@ -15,6 +15,36 @@ class NetworkManager {
     
     private init() { }
     
+    func callKakaoBookAPI(query: String, page: Int, completionHandler: @escaping (KakaoAPIResponseModel) -> Void) {
+        let url = "https://dapi.kakao.com/v3/search/book"
+        
+        print(#function, url)
+        
+        let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.kakaoRestAPIKey)"]
+        
+        AF.request(url,
+                   method: .get,
+                   parameters: ["query": query, "size": 20, "page": page],
+                   headers: header)
+        .validate(statusCode: 200..<300)
+        .responseDecodable(of: KakaoAPIResponseModel.self)
+        { response in
+            
+            switch response.result {
+                
+            case .success(let result):
+                print("success")
+                dump(result.documents)
+                completionHandler(result)
+                
+            case .failure(let error):
+                print("failure")
+                print(error)
+            }
+            
+        }
+    }
+    
     func randomUser(completionHandler: @escaping (String) -> (Void)) {
         print("randomUser1")
         let url = "https://randomuser.me/api/?results=10"

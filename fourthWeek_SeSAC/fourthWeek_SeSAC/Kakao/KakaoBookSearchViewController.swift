@@ -84,61 +84,35 @@ class KakaoBookSearchViewController: UIViewController {
 private extension KakaoBookSearchViewController {
     
     func getKakaoBookAPI(query: String) {
-//        view.endEditing(true)
-        
-        let url = "https://dapi.kakao.com/v3/search/book"
-        
-        print(#function, url)
-        
-        let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.kakaoRestAPIKey)"]
-        
-        AF.request(url,
-                   method: .get,
-                   parameters: ["query": query, "size": 20, "page": self.page],
-                   headers: header)
-        .validate(statusCode: 200..<300)
-        .responseDecodable(of: KakaoAPIResponseModel.self)
-        { response in
-            
-            switch response.result {
-                
-            case .success(let result):
-                print("success")
-                dump(result.documents)
-                if self.page == 1 {
-                    self.list = result.documents
-                } else {
-                    self.list.append(contentsOf: result.documents)
-                }
-                
-                self.isEnd = result.meta.is_end
-                
-                self.tableView.reloadData()
-                
-                if self.page == 1 {
-                    //스크롤을 indexPath 기준 최상단으로 올리기
-                    self.tableView.scrollToRow(
-                        at: IndexPath(row: 0, section: 0),
-                        at: .top,
-                        animated: false
-                    )
-                }
-                
-                /* 내가 쓴 코드
-                if self.beforeSearchText != query {
-                    self.list.removeAll()
-                }
-                //page 1이라면 1-20
-                //page 2라면 21-40
+        NetworkManager.shared.callKakaoBookAPI(query: query, page: page) { result in
+            if self.page == 1 {
+                self.list = result.documents
+            } else {
                 self.list.append(contentsOf: result.documents)
-                self.tableView.reloadData()
-                 */
-                
-            case .failure(let error):
-                print("failure")
-                print(error)
             }
             
+            self.isEnd = result.meta.is_end
+            
+            self.tableView.reloadData()
+            
+            if self.page == 1 {
+                //스크롤을 indexPath 기준 최상단으로 올리기
+                self.tableView.scrollToRow(
+                    at: IndexPath(row: 0, section: 0),
+                    at: .top,
+                    animated: false
+                )
+            }
+            
+            /* 내가 쓴 코드
+            if self.beforeSearchText != query {
+                self.list.removeAll()
+            }
+            //page 1이라면 1-20
+            //page 2라면 21-40
+            self.list.append(contentsOf: result.documents)
+            self.tableView.reloadData()
+             */
         }
     }
     
