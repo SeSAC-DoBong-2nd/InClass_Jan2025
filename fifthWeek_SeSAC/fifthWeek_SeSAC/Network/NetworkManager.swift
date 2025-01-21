@@ -21,7 +21,6 @@ final class NetworkManager {
             if let data = try? Data(contentsOf: NetworkManager.url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
-                        ViewController.group.leave()
                         complitionHandler(image)
                     }
                 }
