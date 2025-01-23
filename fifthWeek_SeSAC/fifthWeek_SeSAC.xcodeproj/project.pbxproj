@@ -23,6 +23,18 @@
 		9ED6919F2D3F3566007E76E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ED6918C2D3F3566007E76E8 /* LaunchScreen.storyboard */; };
 		9ED691A02D3F3566007E76E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ED6918E2D3F3566007E76E8 /* Main.storyboard */; };
 		9ED691A42D3F3581007E76E8 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED691A32D3F3581007E76E8 /* Topic.swift */; };
+		9ED691A92D4077AF007E76E8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED691A82D4077AF007E76E8 /* UIViewController+Extension.swift */; };
+		9ED691AB2D407DF1007E76E8 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED691AA2D407DF1007E76E8 /* Dummy.swift */; };
+		9ED691AD2D4098CB007E76E8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED691AC2D4098CB007E76E8 /* SearchViewController.swift */; };
+		9EEB88912D41CBEC00E0C6C4 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB888F2D41CBEC00E0C6C4 /* SignTextField.swift */; };
+		9EEB88922D41CBEC00E0C6C4 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB888C2D41CBEC00E0C6C4 /* NicknameViewController.swift */; };
+		9EEB88932D41CBEC00E0C6C4 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB888A2D41CBEC00E0C6C4 /* EmailViewController.swift */; };
+		9EEB88942D41CBEC00E0C6C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB888B2D41CBEC00E0C6C4 /* MainViewController.swift */; };
+		9EEB88952D41CBEC00E0C6C4 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB888D2D41CBEC00E0C6C4 /* PhoneViewController.swift */; };
+		9EEB88962D41CBEC00E0C6C4 /* PointButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB888E2D41CBEC00E0C6C4 /* PointButton.swift */; };
+		9EEB88982D41DBB900E0C6C4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB88972D41DBB900E0C6C4 /* NotificationViewController.swift */; };
+		9EEB889A2D4205C200E0C6C4 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB88992D4205C200E0C6C4 /* ClosureViewController.swift */; };
+		9EEB889C2D42106600E0C6C4 /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB889B2D42106600E0C6C4 /* DelegateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +52,18 @@
 		9ED691922D3F3566007E76E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9ED691932D3F3566007E76E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9ED691A32D3F3581007E76E8 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		9ED691A82D4077AF007E76E8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9ED691AA2D407DF1007E76E8 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		9ED691AC2D4098CB007E76E8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9EEB888A2D41CBEC00E0C6C4 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		9EEB888B2D41CBEC00E0C6C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EEB888C2D41CBEC00E0C6C4 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		9EEB888D2D41CBEC00E0C6C4 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		9EEB888E2D41CBEC00E0C6C4 /* PointButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointButton.swift; sourceTree = "<group>"; };
+		9EEB888F2D41CBEC00E0C6C4 /* SignTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
+		9EEB88972D41DBB900E0C6C4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		9EEB88992D4205C200E0C6C4 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		9EEB889B2D42106600E0C6C4 /* DelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +100,15 @@
 		9ED691942D3F3566007E76E8 /* fifthWeek_SeSAC */ = {
 			isa = PBXGroup;
 			children = (
-				9ED691A52D3F35AD007E76E8 /* Appliction */,
+				9ED691A52D3F35AD007E76E8 /* Application */,
 				9ED691A12D3F3569007E76E8 /* Network */,
+				9EEB88902D41CBEC00E0C6C4 /* Sign */,
 				9ED691872D3F3566007E76E8 /* Assets.xcassets */,
 				9ED691882D3F3566007E76E8 /* GroupViewController.swift */,
-				9ED691892D3F3566007E76E8 /* Info.plist */,
 				9ED691932D3F3566007E76E8 /* ViewController.swift */,
+				9ED691A82D4077AF007E76E8 /* UIViewController+Extension.swift */,
+				9ED691AC2D4098CB007E76E8 /* SearchViewController.swift */,
+				9ED691AA2D407DF1007E76E8 /* Dummy.swift */,
 			);
 			path = fifthWeek_SeSAC;
 			sourceTree = "<group>";
@@ -106,15 +133,32 @@
 			path = ResponseModel;
 			sourceTree = "<group>";
 		};
-		9ED691A52D3F35AD007E76E8 /* Appliction */ = {
+		9ED691A52D3F35AD007E76E8 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				9ED691862D3F3566007E76E8 /* AppDelegate.swift */,
 				9ED691922D3F3566007E76E8 /* SceneDelegate.swift */,
 				9ED6918C2D3F3566007E76E8 /* LaunchScreen.storyboard */,
 				9ED6918E2D3F3566007E76E8 /* Main.storyboard */,
+				9ED691892D3F3566007E76E8 /* Info.plist */,
 			);
-			path = Appliction;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9EEB88902D41CBEC00E0C6C4 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				9EEB888A2D41CBEC00E0C6C4 /* EmailViewController.swift */,
+				9EEB888B2D41CBEC00E0C6C4 /* MainViewController.swift */,
+				9EEB888C2D41CBEC00E0C6C4 /* NicknameViewController.swift */,
+				9EEB888D2D41CBEC00E0C6C4 /* PhoneViewController.swift */,
+				9EEB888E2D41CBEC00E0C6C4 /* PointButton.swift */,
+				9EEB888F2D41CBEC00E0C6C4 /* SignTextField.swift */,
+				9EEB88972D41DBB900E0C6C4 /* NotificationViewController.swift */,
+				9EEB88992D4205C200E0C6C4 /* ClosureViewController.swift */,
+				9EEB889B2D42106600E0C6C4 /* DelegateViewController.swift */,
+			);
+			path = Sign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,13 +246,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ED691952D3F3566007E76E8 /* AppDelegate.swift in Sources */,
+				9EEB88912D41CBEC00E0C6C4 /* SignTextField.swift in Sources */,
+				9EEB889A2D4205C200E0C6C4 /* ClosureViewController.swift in Sources */,
+				9EEB88922D41CBEC00E0C6C4 /* NicknameViewController.swift in Sources */,
+				9EEB88932D41CBEC00E0C6C4 /* EmailViewController.swift in Sources */,
+				9EEB88942D41CBEC00E0C6C4 /* MainViewController.swift in Sources */,
+				9EEB88952D41CBEC00E0C6C4 /* PhoneViewController.swift in Sources */,
+				9EEB88962D41CBEC00E0C6C4 /* PointButton.swift in Sources */,
 				9ED691A42D3F3581007E76E8 /* Topic.swift in Sources */,
+				9ED691AB2D407DF1007E76E8 /* Dummy.swift in Sources */,
 				9ED691962D3F3566007E76E8 /* GroupViewController.swift in Sources */,
 				9ED691972D3F3566007E76E8 /* Key.swift in Sources */,
 				9ED691982D3F3566007E76E8 /* NetworkManager.swift in Sources */,
+				9EEB88982D41DBB900E0C6C4 /* NotificationViewController.swift in Sources */,
+				9ED691AD2D4098CB007E76E8 /* SearchViewController.swift in Sources */,
 				9ED691992D3F3566007E76E8 /* PhotoManager.swift in Sources */,
 				9ED6919A2D3F3566007E76E8 /* RandomPhoto.swift in Sources */,
+				9EEB889C2D42106600E0C6C4 /* DelegateViewController.swift in Sources */,
 				9ED6919B2D3F3566007E76E8 /* SceneDelegate.swift in Sources */,
+				9ED691A92D4077AF007E76E8 /* UIViewController+Extension.swift in Sources */,
 				9ED6919C2D3F3566007E76E8 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +300,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A95XXD5WT7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = fifthWeek_SeSAC/Info.plist;
+				INFOPLIST_FILE = fifthWeek_SeSAC/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -276,7 +332,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A95XXD5WT7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = fifthWeek_SeSAC/Info.plist;
+				INFOPLIST_FILE = fifthWeek_SeSAC/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

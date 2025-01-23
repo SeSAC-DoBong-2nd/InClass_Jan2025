@@ -13,7 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        //안에서 사용되는 UILabel의 모든 font를 bold 13으로 디폴트 설정하는 것.
+//        UILabel.appearance().font = .boldSystemFont(ofSize: 13)
+//        
+//        //모든 navigationBar의 tintColor를 black으로 설정
+//        UINavigationBar.appearance().tintColor = .black
+//        
+//        UIView.appearance().backgroundColor = .white
+        
         return true
     }
 

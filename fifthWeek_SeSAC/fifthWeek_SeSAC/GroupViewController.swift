@@ -9,6 +9,11 @@ import UIKit
 
 import Kingfisher
 
+struct User {
+    static let age = 11
+}
+
+
 class GroupViewController: UIViewController {
     
     let firstImageView = {
@@ -42,30 +47,71 @@ class GroupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //switch 구문에서 default가 필요하거나 필요하지 않은 이유
-        //라이브러리나 프레임워크에서 만들어진 열거형의 모든 멤버(case)를 처리했음에도 불구하고 @unknown default를 써야 추후에 대한 대비를 할 수 있다.
-        let value = NSTextAlignment.center
+        User.age
         
-        switch value {
-        case .left:
-            <#code#>
-        case .right:
-            <#code#>
-        case .center:
-            <#code#>
-        case .justified:
-            <#code#>
-        case .natural:
-            <#code#>
-        @unknown default: //버전 이슈. 아직 @frozen이 아니라 추후 enum의 case가 늘어날 수 있으니, 추후 추가될. 즉, 아직 정의되지 않은 case가 늘어났을 때에 대한 대비
-            <#fatalError()#>
+        User.self.age
+        
+//        PhotoManager.shared.test(a: Int.self)
+        
+//        PhotoManager.shared.getATopic(api: .topic(id: "wallpapers"))
+        
+        
+        //1. 타입 어노테이션으로 타입 명시
+        PhotoManager.shared.example(api: .topic(id: "yd4daZHEtcA")) { (value: Topic) in
+            print("통신 성공")
+            dump(value)
+        } failHandler: {
+            print("통신 실패한 경우 alert")
         }
         
+        //2. 매개변수에 T의 타입을 명시
+        // - T.Type (= 메타 타입)
+        PhotoManager.shared.example2(api: .randomPhoto, type: RandomPhoto.self) { value in
+            print("통신 성공")
+            dump(value)
+        } failHandler: {
+            print("통신 실패한 경우 alert")
+        }
+
+
+        var age: Int = 0
+        var name: String = "고래밥"
+        
+        var test: String.Type = String.self
+
+//        print(Dummy(mainContents: "24", subContents: "3536", others: 24))
+//        print(Dummy(mainContents: 2, subContents: 24, others: 124))
+        
+//        let a = plus(a: "2", b: "22")
+//        let b = plus(a: 3.2, b: 1.2)
+//        print(a, b)
         
         
         
-        PhotoManager.shared.callUnsplashRequest(api: .randomPhoto)
-        PhotoManager.shared.callUnsplashRequest(api: .photo(query: "wallpapers"))
+        //switch 구문에서 default가 필요하거나 필요하지 않은 이유
+        //라이브러리나 프레임워크에서 만들어진 열거형의 모든 멤버(case)를 처리했음에도 불구하고 @unknown default를 써야 추후에 대한 대비를 할 수 있다.
+//        let value = NSTextAlignment.center
+        
+//        switch value {
+//        case .left:
+//            <#code#>
+//        case .right:
+//            <#code#>
+//        case .center:
+//            <#code#>
+//        case .justified:
+//            <#code#>
+//        case .natural:
+//            <#code#>
+//        @unknown default: //버전 이슈. 아직 @frozen이 아니라 추후 enum의 case가 늘어날 수 있으니, 추후 추가될. 즉, 아직 정의되지 않은 case가 늘어났을 때에 대한 대비
+//            <#fatalError()#>
+//        }
+        
+        
+        
+        
+//        PhotoManager.shared.callUnsplashRequest(api: .randomPhoto)
+//        PhotoManager.shared.callUnsplashRequest(api: .photo(query: "wallpapers"))
         
         //id: yd4daZHEtcA
 //        PhotoManager.shared.getATopic(api: .photo(query: "wallpapers"))
@@ -113,7 +159,9 @@ class GroupViewController: UIViewController {
     @objc
     func checkBtnTapped() {
         print(#function)
-//        
+        let vc = SearchViewController()
+        navigationController?.pushViewController(vc, animated: true)
+//
 //        let group = DispatchGroup()
 //        //아래 배열을 사용하면 index 값에 아래 코드 순서대로 들어간다는 보장이 없다.
 ////        var imageURLArr: [String] = []

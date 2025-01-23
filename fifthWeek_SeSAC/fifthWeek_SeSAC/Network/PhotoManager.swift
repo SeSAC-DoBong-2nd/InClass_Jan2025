@@ -34,7 +34,7 @@ extension UnsplashRequest {
         case .randomPhoto:
             return URL(string: baseURL + "photos/random")!
         case .topic(let id):
-            return URL(string: baseURL + "photos/\(id)")!
+            return URL(string: baseURL + "topics/\(id)")!
         case .photo(let query):
             return URL(string: baseURL + "photos/\(query)")!
         }
@@ -59,6 +59,7 @@ extension UnsplashRequest {
 
 class PhotoManager {
     
+    //(메타)타입 프로퍼티
     static let shared = PhotoManager()
     
     private init() { }
@@ -103,6 +104,7 @@ class PhotoManager {
         AF.request(api.endPoint, method: api.method, headers: api.header)
             .validate(statusCode: 200..<500)
             .responseDecodable(of: Topic.self) { response in
+                debugPrint(response)
                 switch response.result {
                 case .success(let value):
                     print(value)
@@ -111,6 +113,51 @@ class PhotoManager {
                 }
                 
             }
+    }
+    
+    func example<T: Decodable>(api: UnsplashRequest,
+                               successHandler: @escaping (T) -> Void,
+                               failHandler: @escaping () -> Void) {
+        AF.request(api.endPoint, method: api.method, headers: api.header)
+            .validate(statusCode: 200..<500)
+            .responseDecodable(of: T.self) { response in
+                debugPrint(response)
+                print("response!!!: \n \(response)")
+                switch response.result {
+                case .success(let value):
+                    print(value)
+                    successHandler(value)
+                case .failure(let error):
+                    print(error)
+                    failHandler()
+                }
+                
+            }
+    }
+    
+    func example2<T: Decodable>(api: UnsplashRequest,
+                                type: T.Type,
+                               successHandler: @escaping (T) -> Void,
+                               failHandler: @escaping () -> Void) {
+        AF.request(api.endPoint, method: api.method, headers: api.header)
+            .validate(statusCode: 200..<500)
+            .responseDecodable(of: T.self) { response in
+                debugPrint(response)
+                print("response!!!: \n \(response)")
+                switch response.result {
+                case .success(let value):
+                    print(value)
+                    successHandler(value)
+                case .failure(let error):
+                    print(error)
+                    failHandler()
+                }
+                
+            }
+    }
+    
+    func test(a: Int.Type) {
+        print(a)
     }
     
 }
