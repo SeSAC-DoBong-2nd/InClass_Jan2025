@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EB870BB2D43165300BE424E /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB870BA2D43165300BE424E /* PosterViewController.swift */; };
+		9EB870BD2D4317B500BE424E /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB870BC2D4317B500BE424E /* PosterTableViewCell.swift */; };
+		9EB870BF2D431BC600BE424E /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB870BE2D431BC600BE424E /* PosterCollectionViewCell.swift */; };
 		9ED6915E2D3DD715007E76E8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6915D2D3DD715007E76E8 /* Kingfisher */; };
 		9ED691612D3DD720007E76E8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED691602D3DD720007E76E8 /* Alamofire */; };
 		9ED691642D3DD728007E76E8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED691632D3DD728007E76E8 /* SnapKit */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9EB870BA2D43165300BE424E /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
+		9EB870BC2D4317B500BE424E /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
+		9EB870BE2D431BC600BE424E /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
 		9ED691442D3DD50C007E76E8 /* fifthWeek_SeSAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fifthWeek_SeSAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED691862D3F3566007E76E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ED691872D3F3566007E76E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EB870B92D43164400BE424E /* Poster */ = {
+			isa = PBXGroup;
+			children = (
+				9EB870BA2D43165300BE424E /* PosterViewController.swift */,
+				9EB870BC2D4317B500BE424E /* PosterTableViewCell.swift */,
+				9EB870BE2D431BC600BE424E /* PosterCollectionViewCell.swift */,
+			);
+			path = Poster;
+			sourceTree = "<group>";
+		};
 		9ED6913B2D3DD50C007E76E8 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +116,7 @@
 		9ED691942D3F3566007E76E8 /* fifthWeek_SeSAC */ = {
 			isa = PBXGroup;
 			children = (
+				9EB870B92D43164400BE424E /* Poster */,
 				9ED691A52D3F35AD007E76E8 /* Application */,
 				9ED691A12D3F3569007E76E8 /* Network */,
 				9EEB88902D41CBEC00E0C6C4 /* Sign */,
@@ -260,10 +277,13 @@
 				9ED691982D3F3566007E76E8 /* NetworkManager.swift in Sources */,
 				9EEB88982D41DBB900E0C6C4 /* NotificationViewController.swift in Sources */,
 				9ED691AD2D4098CB007E76E8 /* SearchViewController.swift in Sources */,
+				9EB870BB2D43165300BE424E /* PosterViewController.swift in Sources */,
+				9EB870BD2D4317B500BE424E /* PosterTableViewCell.swift in Sources */,
 				9ED691992D3F3566007E76E8 /* PhotoManager.swift in Sources */,
 				9ED6919A2D3F3566007E76E8 /* RandomPhoto.swift in Sources */,
 				9EEB889C2D42106600E0C6C4 /* DelegateViewController.swift in Sources */,
 				9ED6919B2D3F3566007E76E8 /* SceneDelegate.swift in Sources */,
+				9EB870BF2D431BC600BE424E /* PosterCollectionViewCell.swift in Sources */,
 				9ED691A92D4077AF007E76E8 /* UIViewController+Extension.swift in Sources */,
 				9ED6919C2D3F3566007E76E8 /* ViewController.swift in Sources */,
 			);

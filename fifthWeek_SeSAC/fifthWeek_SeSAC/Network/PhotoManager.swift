@@ -32,7 +32,7 @@ extension UnsplashRequest {
     var endPoint: URL {
         switch self {
         case .randomPhoto:
-            return URL(string: baseURL + "photos/random")!
+            return URL(string: baseURL + "photos/random?count=10")!
         case .topic(let id):
             return URL(string: baseURL + "topics/\(id)")!
         case .photo(let query):
@@ -65,7 +65,7 @@ class PhotoManager {
     private init() { }
     
     func getRandomPhoto(api: UnsplashRequest,
-                        complitionHanlder: @escaping (RandomPhoto) -> Void,
+                        complitionHanlder: @escaping ([RandomPhoto]) -> Void,
                         failHandler: @escaping () -> Void) {
         // parameters: 무조건 쿼리스트링에 들어가는 것은 아님!
         // -> querystring or HTTP Body
@@ -75,7 +75,7 @@ class PhotoManager {
                    encoding: URLEncoding(destination: .queryString),
                    headers: api.header)
             .validate(statusCode: 200..<500)
-            .responseDecodable(of: RandomPhoto.self) { response in
+            .responseDecodable(of: [RandomPhoto].self) { response in
                 switch response.result {
                 case .success(let value):
                     print(value)
