@@ -10,6 +10,13 @@
 		9EB870BB2D43165300BE424E /* PosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB870BA2D43165300BE424E /* PosterViewController.swift */; };
 		9EB870BD2D4317B500BE424E /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB870BC2D4317B500BE424E /* PosterTableViewCell.swift */; };
 		9EB870BF2D431BC600BE424E /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB870BE2D431BC600BE424E /* PosterCollectionViewCell.swift */; };
+		9EC78DB12D4C4EFB00248B19 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC78DB02D4C4EFB00248B19 /* AnimationViewController.swift */; };
+		9EC78DB42D4C63DC00248B19 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9EC78DB32D4C63DC00248B19 /* Lottie */; };
+		9EC78DB62D4C646500248B19 /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EC78DB52D4C646500248B19 /* Test.json */; };
+		9EC790DA2D4C6B2400248B19 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9EC790D82D4C6B2400248B19 /* SCDream5.otf */; };
+		9EC790DB2D4C6B2400248B19 /* SCDream9.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9EC790D92D4C6B2400248B19 /* SCDream9.otf */; };
+		9EC790DC2D4C6B2400248B19 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9EC790D72D4C6B2400248B19 /* SCDream1.otf */; };
+		9EC790DE2D4C770000248B19 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC790DD2D4C770000248B19 /* UIButton+Extension.swift */; };
 		9ED6915E2D3DD715007E76E8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED6915D2D3DD715007E76E8 /* Kingfisher */; };
 		9ED691612D3DD720007E76E8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED691602D3DD720007E76E8 /* Alamofire */; };
 		9ED691642D3DD728007E76E8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9ED691632D3DD728007E76E8 /* SnapKit */; };
@@ -44,6 +51,12 @@
 		9EB870BA2D43165300BE424E /* PosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterViewController.swift; sourceTree = "<group>"; };
 		9EB870BC2D4317B500BE424E /* PosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterTableViewCell.swift; sourceTree = "<group>"; };
 		9EB870BE2D431BC600BE424E /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
+		9EC78DB02D4C4EFB00248B19 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		9EC78DB52D4C646500248B19 /* Test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
+		9EC790D72D4C6B2400248B19 /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
+		9EC790D82D4C6B2400248B19 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		9EC790D92D4C6B2400248B19 /* SCDream9.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream9.otf; sourceTree = "<group>"; };
+		9EC790DD2D4C770000248B19 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		9ED691442D3DD50C007E76E8 /* fifthWeek_SeSAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fifthWeek_SeSAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED691862D3F3566007E76E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ED691872D3F3566007E76E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC78DB42D4C63DC00248B19 /* Lottie in Frameworks */,
 				9ED691642D3DD728007E76E8 /* SnapKit in Frameworks */,
 				9ED6915E2D3DD715007E76E8 /* Kingfisher in Frameworks */,
 				9ED691612D3DD720007E76E8 /* Alamofire in Frameworks */,
@@ -95,6 +109,25 @@
 				9EB870BE2D431BC600BE424E /* PosterCollectionViewCell.swift */,
 			);
 			path = Poster;
+			sourceTree = "<group>";
+		};
+		9EC78DAF2D4C4EED00248B19 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				9EC78DB02D4C4EFB00248B19 /* AnimationViewController.swift */,
+				9EC78DB52D4C646500248B19 /* Test.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		9EC78DB72D4C6A4200248B19 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9EC790D72D4C6B2400248B19 /* SCDream1.otf */,
+				9EC790D82D4C6B2400248B19 /* SCDream5.otf */,
+				9EC790D92D4C6B2400248B19 /* SCDream9.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		9ED6913B2D3DD50C007E76E8 = {
@@ -116,6 +149,8 @@
 		9ED691942D3F3566007E76E8 /* fifthWeek_SeSAC */ = {
 			isa = PBXGroup;
 			children = (
+				9EC78DB72D4C6A4200248B19 /* Font */,
+				9EC78DAF2D4C4EED00248B19 /* Animation */,
 				9EB870B92D43164400BE424E /* Poster */,
 				9ED691A52D3F35AD007E76E8 /* Application */,
 				9ED691A12D3F3569007E76E8 /* Network */,
@@ -126,6 +161,7 @@
 				9ED691A82D4077AF007E76E8 /* UIViewController+Extension.swift */,
 				9ED691AC2D4098CB007E76E8 /* SearchViewController.swift */,
 				9ED691AA2D407DF1007E76E8 /* Dummy.swift */,
+				9EC790DD2D4C770000248B19 /* UIButton+Extension.swift */,
 			);
 			path = fifthWeek_SeSAC;
 			sourceTree = "<group>";
@@ -199,6 +235,7 @@
 				9ED691602D3DD720007E76E8 /* Alamofire */,
 				9ED691632D3DD728007E76E8 /* SnapKit */,
 				9ED691662D3DD730007E76E8 /* Then */,
+				9EC78DB32D4C63DC00248B19 /* Lottie */,
 			);
 			productName = fifthWeek_SeSAC;
 			productReference = 9ED691442D3DD50C007E76E8 /* fifthWeek_SeSAC.app */;
@@ -233,6 +270,7 @@
 				9ED6915F2D3DD720007E76E8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9ED691622D3DD728007E76E8 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9ED691652D3DD730007E76E8 /* XCRemoteSwiftPackageReference "Then" */,
+				9EC78DB22D4C63DC00248B19 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9ED691452D3DD50C007E76E8 /* Products */;
@@ -249,7 +287,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC790DA2D4C6B2400248B19 /* SCDream5.otf in Resources */,
+				9EC790DB2D4C6B2400248B19 /* SCDream9.otf in Resources */,
+				9EC790DC2D4C6B2400248B19 /* SCDream1.otf in Resources */,
 				9ED6919D2D3F3566007E76E8 /* Assets.xcassets in Resources */,
+				9EC78DB62D4C646500248B19 /* Test.json in Resources */,
 				9ED6919F2D3F3566007E76E8 /* LaunchScreen.storyboard in Resources */,
 				9ED691A02D3F3566007E76E8 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +306,7 @@
 			files = (
 				9ED691952D3F3566007E76E8 /* AppDelegate.swift in Sources */,
 				9EEB88912D41CBEC00E0C6C4 /* SignTextField.swift in Sources */,
+				9EC78DB12D4C4EFB00248B19 /* AnimationViewController.swift in Sources */,
 				9EEB889A2D4205C200E0C6C4 /* ClosureViewController.swift in Sources */,
 				9EEB88922D41CBEC00E0C6C4 /* NicknameViewController.swift in Sources */,
 				9EEB88932D41CBEC00E0C6C4 /* EmailViewController.swift in Sources */,
@@ -276,6 +319,7 @@
 				9ED691972D3F3566007E76E8 /* Key.swift in Sources */,
 				9ED691982D3F3566007E76E8 /* NetworkManager.swift in Sources */,
 				9EEB88982D41DBB900E0C6C4 /* NotificationViewController.swift in Sources */,
+				9EC790DE2D4C770000248B19 /* UIButton+Extension.swift in Sources */,
 				9ED691AD2D4098CB007E76E8 /* SearchViewController.swift in Sources */,
 				9EB870BB2D43165300BE424E /* PosterViewController.swift in Sources */,
 				9EB870BD2D4317B500BE424E /* PosterTableViewCell.swift in Sources */,
@@ -518,6 +562,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9EC78DB22D4C63DC00248B19 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
 		9ED6915C2D3DD715007E76E8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -553,6 +605,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9EC78DB32D4C63DC00248B19 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EC78DB22D4C63DC00248B19 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		9ED6915D2D3DD715007E76E8 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9ED6915C2D3DD715007E76E8 /* XCRemoteSwiftPackageReference "Kingfisher" */;

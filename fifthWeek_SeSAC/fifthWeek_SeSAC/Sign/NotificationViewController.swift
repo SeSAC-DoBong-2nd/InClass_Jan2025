@@ -7,6 +7,10 @@
 
 import UIKit
 
+extension NSNotification.Name {
+    static let sesac = NSNotification.Name("sesac")
+}
+
 class NotificationViewController: UIViewController {
     
     let emailTextField = SignTextField(placeholderText: "노티피케이션을 통한 값전달")
@@ -23,7 +27,7 @@ class NotificationViewController: UIViewController {
         //따라서 정방향으로 notification을 사용한다면 기능하지 않는다.
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(jackReceivedNotification),
-                                               name: NSNotification.Name("sesac"),
+                                               name: NSNotification.Name.sesac,
                                                object: nil)
     }
     
